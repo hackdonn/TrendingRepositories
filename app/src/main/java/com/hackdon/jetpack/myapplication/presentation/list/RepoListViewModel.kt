@@ -11,7 +11,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -26,7 +25,8 @@ class RepoListViewModel @Inject constructor(
     private val _searchQuery = MutableStateFlow("")
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
 
-    private var allRepositories: List<com.hackdon.jetpack.myapplication.domain.model.Repository> = emptyList()
+    private var allRepositories: List<com.hackdon.jetpack.myapplication.domain.model.Repository> =
+        emptyList()
 
     init {
         fetchRepos()

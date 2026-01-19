@@ -1,9 +1,7 @@
 package com.hackdon.jetpack.myapplication.domain.model
 
 import kotlinx.serialization.Serializable
-import java.text.NumberFormat
 import java.text.SimpleDateFormat
-import java.util.Date
 import java.util.Locale
 
 @Serializable

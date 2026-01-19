@@ -1,7 +1,6 @@
 package com.hackdon.jetpack.myapplication.presentation.list
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,8 +14,6 @@ import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
 import androidx.compose.runtime.Composable
@@ -31,7 +28,6 @@ import com.hackdon.jetpack.myapplication.domain.model.RepoListState
 import com.hackdon.jetpack.myapplication.domain.model.Repository
 import com.hackdon.jetpack.myapplication.presentation.components.EmptyView
 import com.hackdon.jetpack.myapplication.presentation.components.ErrorView
-import com.hackdon.jetpack.myapplication.presentation.components.LoadingShimmer
 import com.hackdon.jetpack.myapplication.presentation.components.LoadingView
 import com.hackdon.jetpack.myapplication.presentation.components.RepoListItem
 import com.hackdon.jetpack.myapplication.presentation.components.RepositorySearchBar
@@ -92,6 +88,7 @@ fun RepoListScreen(
                     is RepoListState.Loading -> {
                         LoadingView()
                     }
+
                     is RepoListState.Success -> {
                         val repos = (state as RepoListState.Success).repos
                         RepoListContent(
@@ -99,6 +96,7 @@ fun RepoListScreen(
                             onItemClick = onRepoClick
                         )
                     }
+
                     is RepoListState.Error -> {
                         val errorMessage = (state as RepoListState.Error).message
                         ErrorView(
@@ -108,6 +106,7 @@ fun RepoListScreen(
                             onRetry = { viewModel.retry() }
                         )
                     }
+
                     is RepoListState.Empty -> {
                         EmptyView()
                     }
