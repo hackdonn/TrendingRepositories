@@ -1,12 +1,5 @@
 Trending Kotlin Repositories
 
-### 📹 Demo Video
-
-Check out the screen recording of the app in action:
-
-[![Demo Video](demo/Screen_recording_20260119_trending_repositories.webm)](demo/Screen_recording_20260119_trending_repositories.webm)
-
-
 #### 1. **Repository List Screen** (30 mins)
 
 - Fetch and display a list of trending repositories from the provided API
