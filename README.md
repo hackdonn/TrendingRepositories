@@ -1,3 +1,5 @@
+#### 1 **Repository List Screen** (30 mins)
+
 - Fetch and display a list of trending repositories from the provided API
 - Each item should show:
   - Repository name
