@@ -1,4 +1,4 @@
-#### 1 **Repository List Screen** (30 mins)
+#### 1. **Repository List Screen** (30 mins)
 
 - Fetch and display a list of trending repositories from the provided API
 - Each item should show:
@@ -42,8 +42,8 @@
 ### Bonus Features (If Time Permits)
 
 - [ ] Offline caching with Room (show cached data when offline)
-- [ ] Dark mode support
-- [ ] Skeleton loading animation
+- [x] Dark mode support
+- [x] Skeleton loading animation
 - [ ] Unit tests for ViewModel
 
 ---
