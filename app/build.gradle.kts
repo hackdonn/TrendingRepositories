@@ -91,4 +91,12 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.coil.core)
     implementation(libs.coil.network.okhttp)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+
+    // DataStore
+    implementation(libs.androidx.datastore.preferences)
 }
