@@ -43,7 +43,7 @@ Trending Kotlin Repositories
 
 ### Bonus Features (If Time Permits)
 
-- [ ] Offline caching with Room (show cached data when offline)
+- [x] Offline caching with Room (show cached data when offline)
 - [x] Dark mode support
 - [x] Skeleton loading animation
 - [ ] Unit tests for ViewModel
