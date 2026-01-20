@@ -16,8 +16,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
-import com.hackdon.jetpack.myapplication.ui.theme.OnSurfaceVariant
-import com.hackdon.jetpack.myapplication.ui.theme.SurfaceVariant
 
 @Composable
 fun RepositorySearchBar(
@@ -34,22 +32,25 @@ fun RepositorySearchBar(
             Text(
                 text = "Search repositories...",
                 style = MaterialTheme.typography.bodyLarge,
-                color = OnSurfaceVariant
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         },
         leadingIcon = {
             Icon(
                 imageVector = Icons.Default.Search,
                 contentDescription = "Search",
-                tint = OnSurfaceVariant
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
         },
         singleLine = true,
         shape = RoundedCornerShape(28.dp),
         colors = TextFieldDefaults.colors(
-            focusedContainerColor = SurfaceVariant,
-            unfocusedContainerColor = SurfaceVariant,
-            disabledContainerColor = SurfaceVariant,
+            focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+            unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+            disabledContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+            focusedTextColor = MaterialTheme.colorScheme.onSurface,
+            unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
+            disabledTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
             focusedIndicatorColor = Color.Transparent,
             unfocusedIndicatorColor = Color.Transparent,
             disabledIndicatorColor = Color.Transparent,
